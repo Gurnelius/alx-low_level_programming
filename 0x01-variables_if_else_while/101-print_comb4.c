@@ -10,6 +10,7 @@
  * 01 and 10 are considered the same combination of the two digits 0 and 1
  * Print only the smallest combination of two digits
  * Numbers should be printed in ascending order, with two digits
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
