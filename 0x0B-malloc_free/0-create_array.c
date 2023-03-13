@@ -3,14 +3,13 @@
 
 char *create_array(unsigned int size, char c)
 {
+	char *buffer;
+
 	if (size == 0)
 	{
 		return (NULL);
 	}
-        
-	char *buffer;
-
-	buffer = malloc(sizeof(char) * size);
+	buffer = malloc(sizeof(c) * size);
 
 	if (buffer == NULL)
 		return (NULL);
