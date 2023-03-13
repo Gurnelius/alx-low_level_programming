@@ -3,18 +3,20 @@
 
 char *create_array(unsigned int size, char c)
 {
-	char *buffer;
+	char *b;
 
 	if (size == 0)
 	{
 		return (NULL);
 	}
-	buffer = malloc(sizeof(c) * size);
+	b = malloc(sizeof(c) * size);
 
-	if (buffer == NULL)
+	if (b == NULL)
 		return (NULL);
-
-	buffer[0] = c;
+	for(int i = 0; i < size; i++)
+	{
+		b[i] = c;
+	}
 	
-	return buffer;
+	return (b);
 }
