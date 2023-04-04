@@ -3,7 +3,7 @@
 *sum_listint - get the sum of elements in list
 *@head: pointer to the list
 *
-*Returns: sum of the elements
+*Return: sum of the elements
 */
 int sum_listint(listint_t *head)
 {
