@@ -5,13 +5,19 @@
  *
  * Return: 1 or 0
  */
+}
+
 int get_endianness(void)
 {
-	unsigned int i = 1;
-	char *c = (char *)&i;
+	unsigned int num = 1;
+	char *byte_ptr = (char *)&num;
 
-	if (*c)
+	if (*byte_ptr == 1)
+	{
 		return (1);
+	}
 	else
+	{
 		return (0);
+	}
 }
