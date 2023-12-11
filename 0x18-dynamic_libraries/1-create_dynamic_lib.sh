@@ -1,9 +1,10 @@
 #!/bin/bash
 
-if [ $# -eq 0 ]; then
-    echo "Usage: $0 <arg1> [<arg2> ...]"
-    exit 1
-fi
+# Compile all .c files into object files
+gcc -Wall -fPIC -c *.c
 
-gcc -fPIC -c *c
-gcc 
+# Create a dynamic library from the object files
+gcc -shared -o liball.so *.o
+
+# Clean up - remove the object files
+rm *.o
