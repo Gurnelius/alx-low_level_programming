@@ -8,3 +8,4 @@ gcc -shared -o liball.so *.o
 
 # Clean up - remove the object files
 rm *.o
+
