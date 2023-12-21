@@ -1,5 +1,14 @@
 #include "hash_tables.h"
 
+/**
+ * hash_table_set - add element to a hash
+ * table
+ *
+ * @ht: pointer to a hash table
+ * @key: element's key
+ * @value: element's value
+ * Return: 1 - success, 0 fail
+ */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
@@ -24,7 +33,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		current = ht->array[index];
 
-		while(current->next != NULL)
+		while (current->next != NULL)
+
 			current = current->next;
 		current->next = node;
 	}
