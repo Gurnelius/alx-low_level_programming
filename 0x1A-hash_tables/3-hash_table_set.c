@@ -41,7 +41,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	node->value = strdup(value);
 	if (node->value == NULL)
 	{
-		node->value = '\0';
+		node->value = "";
 	}
 
 	if (ht->array[index] == NULL)
