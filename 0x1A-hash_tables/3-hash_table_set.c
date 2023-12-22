@@ -27,7 +27,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	node->value = strdup(value);
 	node->key = strdup(key);
 
-	if (node->key == NULL)
+	if (node->key == NULL || node->value == NULL)
 	{
 		free(node->value);
 		free(node->key);
