@@ -15,8 +15,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *node;
 
 	if (!ht)
-		ht = hash_table_create(1024);
-
+	{
+		free(ht);
+		return (0);
+	}
 	index = key_index((const unsigned char *)key, ht->size);
 	node = malloc(sizeof(hash_node_t));
 
