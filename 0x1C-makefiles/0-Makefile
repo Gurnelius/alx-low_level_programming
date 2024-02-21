@@ -1,0 +1,7 @@
+PROG = school
+CC = gcc
+MAIN = main
+
+all: ${PROG}.c
+	${CC} ${PROG}.c ${MAIN}.c -o ${PROG}
+
